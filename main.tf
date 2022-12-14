@@ -40,6 +40,6 @@ resource "alkira_connector_internet_exit" "connector" {
   https://registry.terraform.io/providers/alkiranet/alkira/latest/docs/resources/connector_internet_exit
   */
   public_ip_number                         = var.public_ip_number
-  traffic_distribution_algorithm           = var.traffic_distribution_algorithm
-  traffic_distribution_algorithm_attribute = var.traffic_distribution_algorithm_attribute
+  traffic_distribution_algorithm           = var.dist_algorithm
+  traffic_distribution_algorithm_attribute = var.dist_algorithm_attribute
 }
