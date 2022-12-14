@@ -42,19 +42,13 @@ variable "segment" {
   type        = string
 }
 
-variable "size" {
-  description = "Alkira - connector size"
-  type        = string
-  default     = "SMALL"
-}
-
-variable "traffic_dist_algorithm" {
+variable "traffic_distribution_algorithm" {
   description = "Algorithm used for traffic distribution"
   type        = string
   default     = "HASHING"
 }
 
-variable "traffic_dist_attribute" {
+variable "traffic_distribution_algorithm_attribute" {
   description = "Attribute of algorithm used for traffic distribution"
   type        = string
   default     = "DEFAULT"
