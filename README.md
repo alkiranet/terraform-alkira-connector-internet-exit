@@ -1,9 +1,7 @@
 # Alkira Internet Exit Connector
 This module makes it easy to provision an [Alkira Internet Exit Connector](https://registry.terraform.io/providers/alkiranet/alkira/latest/docs/resources/connector_internet_exit).
 
-## Baisc
-This connector allows traffic from various clouds, sites, and users to _egress_ to the internet. The number of public IP addresses can be adjusted to accommodate heavier traffic flows and adding **traffic_dist_attribute = "SRC_IP"** allows for traffic exiting the _CXP_ to be based on source IP address only.
-
+## Basic Usage
 ```hcl
 module "inet_exit" {
   source = "alkiranet/connector-internet-exit/alkira"
