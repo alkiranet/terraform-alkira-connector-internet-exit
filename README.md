@@ -14,11 +14,6 @@ module "inet_exit" {
   group        = "www"
   billing_tags = ["network", "security"]
 
-  # Advanced (optional)
-  public_ip_number       = 6
-  traffic_dist_algorithm = "HASHING"
-  traffic_dist_attribute = "SRC_IP"
-
 }
 ```
 <!-- BEGIN_TF_DOCS -->
@@ -26,14 +21,14 @@ module "inet_exit" {
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13.1 |
-| <a name="requirement_alkira"></a> [alkira](#requirement\_alkira) | >= 0.9.6 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3.0 |
+| <a name="requirement_alkira"></a> [alkira](#requirement\_alkira) | >= 0.9.8 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_alkira"></a> [alkira](#provider\_alkira) | >= 0.9.6 |
+| <a name="provider_alkira"></a> [alkira](#provider\_alkira) | >= 0.9.8 |
 
 ## Modules
 
@@ -60,9 +55,8 @@ No modules.
 | <a name="input_name"></a> [name](#input\_name) | Name of cloud network and Alkira connector | `string` | n/a | yes |
 | <a name="input_public_ip_number"></a> [public\_ip\_number](#input\_public\_ip\_number) | Number of public IPs for connector; Default is 2 | `number` | `2` | no |
 | <a name="input_segment"></a> [segment](#input\_segment) | Alkira - segment to add connector to | `string` | n/a | yes |
-| <a name="input_size"></a> [size](#input\_size) | Alkira - connector size | `string` | `"SMALL"` | no |
-| <a name="input_traffic_dist_algorithm"></a> [traffic\_dist\_algorithm](#input\_traffic\_dist\_algorithm) | Algorithm used for traffic distribution | `string` | `"HASHING"` | no |
-| <a name="input_traffic_dist_attribute"></a> [traffic\_dist\_attribute](#input\_traffic\_dist\_attribute) | Attribute of algorithm used for traffic distribution | `string` | `"DEFAULT"` | no |
+| <a name="input_traffic_distribution_algorithm"></a> [traffic\_distribution\_algorithm](#input\_traffic\_distribution\_algorithm) | Algorithm used for traffic distribution | `string` | `"HASHING"` | no |
+| <a name="input_traffic_distribution_algorithm_attribute"></a> [traffic\_distribution\_algorithm\_attribute](#input\_traffic\_distribution\_algorithm\_attribute) | Attribute of algorithm used for traffic distribution | `string` | `"DEFAULT"` | no |
 
 ## Outputs
 
